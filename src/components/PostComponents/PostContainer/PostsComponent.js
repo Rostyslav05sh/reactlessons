@@ -1,6 +1,4 @@
-import {Posts} from "./components/PostComponents/PostContainer/Posts";
-import {PostsComponent} from "./components/PostComponents/PostContainer/PostsComponent";
-import {Launches} from "./components/SpaceXComponents/SpaceXContainer/Launches";
+import {Posts} from "./Posts";
 
 // let posts = [
 //     {
@@ -605,15 +603,12 @@ import {Launches} from "./components/SpaceXComponents/SpaceXContainer/Launches";
 //     }
 // ]
 
-const App = () => {
+const PostsComponent = () => {
     return (
         <div>
             {/*{posts.map(post => <Posts post={post} key={post.id}/>)}*/}
-            {/*    <PostsComponent/>*/}
-            <Posts/>
-            <Launches/>
         </div>
     );
 };
 
-export {App};
+export {PostsComponent};
