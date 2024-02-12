@@ -1,5 +1,5 @@
 import axios from "axios";
-import {addictionalURL, baseURL} from "../Constants/urls";
+import {baseURL} from "../Constants/urls";
 
 
 
