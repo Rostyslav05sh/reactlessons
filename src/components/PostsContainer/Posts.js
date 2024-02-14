@@ -5,7 +5,7 @@ import {Post} from "./Post";
 
 const Posts = () => {
 
-    const [posts, setPosts] = useState([])
+    const [post, setPosts] = useState(null)
     const {state:{postId}} = useLocation();
 
     useEffect(() => {
@@ -15,7 +15,7 @@ const Posts = () => {
 
     return (
         <div>
-            {posts.map(post => <Post key={post.id} post={post}/>)}
+            {post && <Post post={post}/>}
         </div>
     );
 };
