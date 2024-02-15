@@ -4,19 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd16f538-41cf-42c9-a626-fe2c3773c8b7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/constants/urls.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/layouts/MainLayout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/PostsDetailsPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/PostsPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/UsersDetailPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/UsersPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/router.js" afterDir="false" />
+    <list default="true" id="cd16f538-41cf-42c9-a626-fe2c3773c8b7" name="Changes" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/src/componets/Post.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/componets/Posts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/componets/User.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/componets/UserDetail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/componets/Users.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/componets/UsersDetails.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/UsersDetailsPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/apiService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/userService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/urls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/urls.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/UsersDetailPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/UsersPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/UsersPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +61,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "HW5",
+    "js.last.introduce.type": "CONST",
     "node.js.selected.package.tslint": "(autodetect)",
     "ts.external.directory.path": "/Applications/IntelliJ IDEA.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
@@ -72,9 +76,22 @@
       <option name="presentableId" value="Default" />
       <updated>1706728969029</updated>
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1707987817039</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707987817039</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
 </project>
