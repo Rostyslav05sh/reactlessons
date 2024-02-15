@@ -1,4 +1,4 @@
-import {useLocation} from "react-router-dom";
+import {Outlet, useLocation} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {userService} from "../services/userService";
 import {UserDetail} from "../componets/UserDetail";
@@ -16,6 +16,7 @@ const UsersDetailsPage = () => {
     return (
         <div>
             {user && <UserDetail user={user}/>}
+            <Outlet/>
         </div>
     );
 };

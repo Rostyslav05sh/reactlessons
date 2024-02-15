@@ -1,4 +1,4 @@
-import {Outlet, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 const UserDetail = ({user}) => {
 
@@ -14,7 +14,6 @@ const UserDetail = ({user}) => {
             <div>email: {email}</div>
             <div>address:<br/> city: {address.city}<br/> street: {address.street}</div>
             <button onClick={() => navigate('posts', {state:{userId: id}})}>post of current user</button>
-            <Outlet/>
         </div>
     );
 };

@@ -5,16 +5,16 @@ import {Post} from "./Post";
 
 const Posts = () => {
 
-    const [post, setPost] = useState(null)
+    const [posts, setPosts] = useState([])
     const {state:{userId}} = useLocation();
 
     useEffect(() => {
-        userService.getPostsOfUserById(userId).then(({data}) => setPost(data))
+        userService.getPostsOfUserById(userId).then(({data}) => setPosts(data))
     }, [userId]);
     
     return (
         <div>
-            {post && <Post post={post}/>}
+            {posts.map(post => <Post key={post.id} post={post}/>)}
         </div>
     );
 };

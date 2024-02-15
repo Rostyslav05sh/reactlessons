@@ -7,12 +7,7 @@ const userService = {
     getPostsOfUserById:(id) => apiService.get(urls.users.postsOfUserById(id))
 }
 
-const postService = {
-    getAll:() => apiService.get(urls.posts.base),
-    getById:(id) => apiService.get(urls.posts.byId(id))
-}
 
 export {
-    userService,
-    postService
+    userService
 }

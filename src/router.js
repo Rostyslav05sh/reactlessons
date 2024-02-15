@@ -2,9 +2,8 @@ import {createBrowserRouter, Navigate} from "react-router-dom";
 import {MainLayout} from "./layouts/MainLayout";
 import {UsersPage} from "./pages/UsersPage";
 import {UsersDetailsPage} from "./pages/UsersDetailsPage";
-import {PostsDetailsPage} from "./pages/PostsDetailsPage";
-import {UserDetail} from "./componets/UserDetail";
 import {PostsPage} from "./pages/PostsPage";
+import {PostsDetailsPage} from "./pages/PostsDetailsPage";
 
 const router = createBrowserRouter([
     {
@@ -16,17 +15,14 @@ const router = createBrowserRouter([
                 path: 'users', element: <UsersPage/>
             },
             {
-                path: 'user-details', element: <UsersDetailsPage/>
+                path: 'user-details', element: <UsersDetailsPage/>, children: [
+                    {
+                        path: 'posts', element: <PostsPage/>
+                    }
+                ]
             },
             {
-                path: 'details', element: <UserDetail/>, children: [
-            {
-                path: 'posts', element: <PostsPage/>
-            }
-            ]
-            },
-            {
-                path: 'postDetail', element: <PostsDetailsPage/>
+                path: 'postDetails', element: <PostsDetailsPage/>
             }
         ]
     }
