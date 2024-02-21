@@ -1,0 +1,17 @@
+.Episode {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.EpisodeCont {
+    width: 24.75vw;
+    border: 1px solid black;
+}
+
+.EpisodeBtn {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    margin-top: 2vh;
+}

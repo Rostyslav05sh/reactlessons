@@ -1,7 +1,9 @@
+import {Characters} from "../components/CharacterContainer/Characters";
+
 const CharacterPaga = () => {
     return (
         <div>
-            CharacterPaga
+            <Characters/>
         </div>
     );
 };
