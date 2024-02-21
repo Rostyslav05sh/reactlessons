@@ -1,17 +1,15 @@
 import React from "react";
 
 const Character = ({characters}) => {
+
+    const {id, name, image} = characters;
+
     console.log(characters)
     return (
         <div>
-            {Array.isArray(characters) && characters.map((character, index) => (
-
-                <div key={character?.id || index}>
-                    <div>id: {character?.id}</div>
-                    <div>name: {character?.name}</div>
-                    <img src={character?.image}/>
-                </div>
-            ))}
+                    <div>id: {id}</div>
+                    <div>name: {name}</div>
+                    <img src={image}/>
         </div>
     );
 };
