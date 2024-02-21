@@ -27,7 +27,7 @@ const Characters = () => {
 
     return (
         <div>
-            {characters && <Character characters={characters} request={request}/>}
+            {characters && <Character characters={characters}/>}
         </div>
     );
 };
