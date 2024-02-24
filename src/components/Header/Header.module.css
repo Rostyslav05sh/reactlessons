@@ -1,0 +1,11 @@
+.Header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: snow;
+    height: 10vh;
+    background-color: black;
+}
+
