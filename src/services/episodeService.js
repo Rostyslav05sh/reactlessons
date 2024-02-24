@@ -1,10 +1,10 @@
-import axios from "axios";
+import {apiService} from "./apiService";
 
 import {urls} from "../constants";
 
 
 const episodesService = {
-    getAll: () => axios.get(urls.episodes.base)
+    getAll: (page) => apiService.get(urls.episodes.base, {params: {page}})
 }
 
 export {

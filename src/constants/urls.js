@@ -9,7 +9,7 @@ const urls = {
     },
     characters: {
         base: characters,
-        ById: (id) => `${characters}/${id}`
+        ById: (ids) => `${characters}/${ids}`
     }
 }
 

@@ -1,10 +1,9 @@
-import axios from "axios";
-
 import {urls} from "../constants";
+import {apiService} from "./apiService";
 
 const characterService = {
-    getAll: () => axios.get(urls.characters.base),
-    getById: (id) => axios.get(urls.characters.ById(id))
+    getAll: () => apiService.get(urls.characters.base),
+    getById: (ids) => apiService.get(urls.characters.ById(ids))
 }
 
 export {
