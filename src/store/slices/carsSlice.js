@@ -2,7 +2,7 @@ import {createSlice} from "@reduxjs/toolkit";
 
 const initialState = {
     cars: [],
-    trigger: null,
+    changeTrigger: null,
     carForUpdate: null
 }
 const carsSlice = createSlice({
