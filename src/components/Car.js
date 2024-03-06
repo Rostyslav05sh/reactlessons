@@ -1,11 +1,15 @@
 import {carsService} from "../services";
+import {useDispatch} from "react-redux";
+import {carsActions} from "../store";
 
-const Car = ({car, setCarForUpdate, setTrigger}) => {
+const Car = ({car}) => {
     const {id, brand, price, year} = car;
+
+    const dispatch = useDispatch();
 
     const deleteCar = async () => {
         await carsService.deleteById(id)
-        setTrigger(prev => !prev)
+        dispatch(carsActions.changeTrigger())
     }
 
     return (
@@ -14,7 +18,7 @@ const Car = ({car, setCarForUpdate, setTrigger}) => {
             <div>brand: {brand}</div>
             <div>price: {price}</div>
             <div>year: {year}</div>
-            <button onClick={() => setCarForUpdate(car)}>update</button>
+            <button onClick={() => dispatch(carsActions.setCarForUpdate(car))}>update</button>
             <button onClick={deleteCar}>delete</button>
         </div>
     );

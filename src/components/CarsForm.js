@@ -1,9 +1,14 @@
 import {useEffect} from "react";
 import {useForm} from "react-hook-form";
 import {carsService} from "../services";
+import {useDispatch, useSelector} from "react-redux";
+import {carsActions} from "../store";
 
-const CarsForm = ({setTrigger, carForUpdate, setCarForUpdate}) => {
+const CarsForm = () => {
+
     const {register, reset, handleSubmit, formState: {isValid, errors}, setValue} = useForm();
+    const dispatch = useDispatch();
+    const {carForUpdate} = useSelector(state => state.cars);
 
     useEffect(() => {
         if (carForUpdate) {
@@ -11,16 +16,16 @@ const CarsForm = ({setTrigger, carForUpdate, setCarForUpdate}) => {
             setValue('price', carForUpdate.price, {shouldValidate: true})
             setValue('year', carForUpdate.year, {shouldValidate: true})
         }
-    }, [carForUpdate]);
+    }, [carForUpdate, setValue]);
     const save = async (car) => {
         await carsService.create(car)
-        setTrigger(prev => !prev)
+        dispatch(carsActions.changeTrigger())
         reset()
     }
     const update = async (car) => {
         await carsService.updateById(carForUpdate.id, car)
-        setTrigger(prev => !prev)
-        setCarForUpdate(null)
+        dispatch(carsActions.changeTrigger())
+        dispatch(carsActions.setCarForUpdate(null))
         reset()
     }
     return (
