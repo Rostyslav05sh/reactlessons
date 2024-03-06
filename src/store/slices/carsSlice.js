@@ -13,7 +13,7 @@ const carsSlice = createSlice({
             state.cars = actions.payload
         },
         changeTrigger: (state) => {
-            state.trigger = !state.trigger
+            state.changeTrigger = !state.changeTrigger
         },
         setCarForUpdate: (state, actions) => {
             state.carForUpdate = actions.payload
