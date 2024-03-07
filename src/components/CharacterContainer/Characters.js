@@ -12,7 +12,7 @@ const Characters = () => {
     const {ids} = useParams();
 
     useEffect(() => {
-        dispatch(characterActions.getById(ids))
+        dispatch(characterActions.getById({ids}))
     }, [ids]);
 
     const back = () => {
