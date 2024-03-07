@@ -31,8 +31,7 @@ const episodeSlice = createSlice({
             state.trigger = !state.trigger
         },
         getIds: state => {
-            const ids = state.characters.map(character => character.split('/').slice(-1)[0]).join(',');
-            return ids
+            state.results.characters.map(character => character.split('/').slice(-1)[0]).join(',');
         }
     },
     extraReducers: builder => {

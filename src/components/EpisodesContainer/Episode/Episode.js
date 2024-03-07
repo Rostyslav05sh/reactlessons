@@ -7,7 +7,7 @@ const Episode = ({episode}) => {
     const {id, name, episode: chapter, characters} = episode;
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const {getIds} = useSelector(state => state.characters);
+    const {getIds} = useSelector(state => state.episodes);
     const toCharacters = () => {
         navigate(`/characters/${getIds}`)
     };
