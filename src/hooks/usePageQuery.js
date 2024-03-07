@@ -7,11 +7,11 @@ const usePageQuery = () => {
 
     return {
         page,
-        prevPage: () => setQuery(prev => {
+        prevPageBtn: () => setQuery(prev => {
             prev.set('page', (+prev.get('page') - 1).toString())
             return prev
         }),
-        nextPage: () => setQuery(prev => {
+        nextPageBtn: () => setQuery(prev => {
             prev.set('page', (+prev.get('page') + 1).toString())
             return prev
         })

@@ -1,23 +1,23 @@
-import {useEffect, useState} from "react";
-import {useNavigate, useParams} from "react-router-dom";
+import {useEffect} from "react";
+import {useNavigate} from "react-router-dom";
 import {Character} from "./Character";
-import {characterService} from "../../services";
-import {useAppContext} from "../../hoc";
+import {useDispatch, useSelector} from "react-redux";
+import {characterActions} from "../../store/slices/characterSlice";
 
 const Characters = () => {
 
-    const [characters, setCharacters] = useState([])
-    const {ids} = useParams();
+    const dispatch = useDispatch();
+    const {characters, ids} = useSelector(state => state.characters);
     const navigate = useNavigate();
-    const [, setName] = useAppContext();
+
+    console.log(ids);
 
     useEffect(() => {
-        characterService.getById(ids).then(({data}) => setCharacters(data))
-    }, [ids]);
+        dispatch(characterActions.getById(ids))
+    }, [ids, dispatch]);
 
     const back = () => {
         navigate(-1)
-        setName(null)
     }
 
     return (
