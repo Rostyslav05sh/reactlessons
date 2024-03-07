@@ -8,9 +8,10 @@ import {episodeActions} from "../../../store/slices/episodeSlice";
 
 const Episodes = () => {
 
+    const {page, prevPageBtn, nextPageBtn} = usePageQuery();
+
     const dispatch = useDispatch();
     const {episodes, prevPage, nextPage} = useSelector(state => state.episodes);
-    const {page, prevPageBtn, nextPageBtn} = usePageQuery();
 
     useEffect(() => {
         dispatch(episodeActions.getAll({page}))
@@ -19,7 +20,7 @@ const Episodes = () => {
 
     return (
         <div className={css.Episode}>
-            {episodes.map(episode => <Episode key={episode.id} episode={episode} characters={episode.characters}/>)}
+            {episodes.map(episode => <Episode key={episode.id} episode={episode}/>)}
             <div className={css.buttons}>
             <button onClick={prevPageBtn} disabled={!prevPage}>prev</button>
             <button onClick={nextPageBtn} disabled={!nextPage}>next</button>

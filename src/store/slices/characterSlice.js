@@ -12,7 +12,6 @@ const getById = createAsyncThunk(
     async ({ids}, thunkAPI) => {
         try {
             const {data} = await characterService.getById(ids);
-            console.log('API Response:', data);
             return data
         } catch (e) {
             const error = e.response.data

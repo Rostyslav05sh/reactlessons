@@ -1,5 +1,5 @@
 import {useEffect} from "react";
-import {useNavigate} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import {Character} from "./Character";
 import {useDispatch, useSelector} from "react-redux";
 import {characterActions} from "../../store/slices/characterSlice";
@@ -7,14 +7,13 @@ import {characterActions} from "../../store/slices/characterSlice";
 const Characters = () => {
 
     const dispatch = useDispatch();
-    const {characters, ids} = useSelector(state => state.characters);
+    const {characters} = useSelector(state => state.characters);
     const navigate = useNavigate();
-
-    console.log(ids);
+    const {ids} = useParams();
 
     useEffect(() => {
         dispatch(characterActions.getById(ids))
-    }, [ids, dispatch]);
+    }, [ids]);
 
     const back = () => {
         navigate(-1)
